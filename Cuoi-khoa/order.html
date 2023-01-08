@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="order.css">
+    <script src="https://kit.fontawesome.com/b7b8c8f974.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <div id="header">       
+        <div id="nav-list">
+            <div id="nav-bar">
+                <a class="nav-content" href="index.html">Trang chủ</a>
+                <a class="nav-content" href="index.html">Về chúng tôi</a>
+                <a class="main nav-content" href="order.html">Đặt hàng</a>
+                <a class="nav-content" href="index.html">Liên hệ</a>
+                <a class="nav-content" href="#">Khuyến mãi</a>
+                <a class="nav-content" href="index.html">Nổi bật</a>                
+            </div>
+            <form id="search" action="#">
+                <input class="search-item" type="text" placeholder="Search.." name="search">
+                <button class="search-item" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="page">
+        <!-- list -->
+        <div class="list">           
+            <h2 class="selection" onclick="show('all')">Tất cả</h2>
+
+            <p class="selection" onclick="show('coffee')">Cà phê</p>
+
+            <p class="selection" onclick="show('fruit-tea')">Trà hoa quả</p>
+
+            <p class="selection" onclick="show('milk-tea')">Trà sữa</p>
+
+            <p class="selection" onclick="show('yogurt')">Sữa chua</p>
+
+            <p class="selection" onclick="show('juice')">Nước ép hoa quả</p>
+
+            <p class="selection" onclick="show('smoothie')">Sinh tố</p>
+
+            <p class="selection" onclick="show('blended-ice')">Đá xay</p>
+
+            <p class="selection" onclick="show('food')">Đồ ăn</p>
+
+            <p class="selection" onclick="show('other')">Đặc biệt</p>
+
+        </div>
+        
+
+        <!-- menu -->
+        <div class="display">
+            <div class="category" id="coffee">
+                <h1>Cà phê</h1>
+                <div class="product-panel">
+                    <div class="product-pane" onclick="showItem('images/products/coffee/hot-latte.jpg', 'Latte nóng', '45.000 đ')">
+                        <img src="images/products/coffee/hot-latte.jpg" alt="">
+                        <h3 class="desc">Latte nóng</h3>
+                        <p class="desc">45.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/coffee/hot-choco-coffee.jpg', 'Socola nóng', '45.000 đ')">
+                        <img src="images/products/coffee/hot-choco-coffee.jpg" alt="">
+                        <h3 class="desc">Socola nóng</h3>
+                        <p class="desc">45.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/coffee/cocoa-coconut.jpg', 'Cà phê cacao sữa dừa', '50.000 đ')">
+                        <img src="images/products/coffee/cocoa-coconut.jpg" alt="">
+                        <h3 class="desc">Cà phê cacao sữa dừa</h3>
+                        <p class="desc">50.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/coffee/energy-coffee(andMilk).jpg', 'Cà phê năng lượng đen (nóng/đá)', '32.000 đ')">
+                        <img src="images/products/coffee/energy-coffee(andMilk).jpg" alt="">
+                        <h3 class="desc">Cà phê năng lượng đen (nóng/đá)</h3>
+                        <p class="desc">32.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/coffee/energy-coffee(andMilk).jpg', 'Cà phê năng lượng sữa (nóng/đá)', '35.000 đ')">
+                        <img src="images/products/coffee/energy-coffee(andMilk).jpg" alt="">
+                        <h3 class="desc">Cà phê năng lượng sữa (nóng/đá)</h3>
+                        <p class="desc">35.000 đ</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="category" id="fruit-tea">
+                <h1>Trà hoa quả</h1>
+                <div class="product-panel">
+                    <div class="product-pane" onclick="showItem('images/products/fruit-tea/peach-tea.jpg', 'Trà đào cam sả', '49.000 đ')" id="fruit-tea-1">
+                        <img src="images/products/fruit-tea/peach-tea.jpg" alt="">
+                        <h3 class="desc">Trà đào cam sả</h3>
+                        <p class="desc">49.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/fruit-tea/lychee-melon-tea.jpg', 'Trà vải dưa hấu', '45.000 đ')" id="fruit-tea-2">
+                        <img src="images/products/fruit-tea/lychee-melon-tea.jpg" alt="">
+                        <h3 class="desc">Trà vải dưa hấu</h3>
+                        <p class="desc">45.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/fruit-tea/dragon-tea.jpg', 'Trà bưởi hồng thanh long', '45.000 đ')" id="fruit-tea-3">
+                        <img src="images/products/fruit-tea/dragon-tea.jpg" alt="">
+                        <h3 class="desc">Trà bưởi hồng thanh long</h3>
+                        <p class="desc">45.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/fruit-tea/apple-mint.jpg', 'Trà táo bạc hà', '47.000 đ')" id="fruit-tea-4">
+                        <img src="images/products/fruit-tea/apple-mint.jpg" alt="">
+                        <h3 class="desc">Trà táo bạc hà</h3>
+                        <p class="desc">47.000 đ</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="category" id="milk-tea">
+                <h1>Trà sữa</h1>
+                <div class="product-panel">
+                    <div class="product-pane" onclick="showItem('images/products/milk-tea/black-bubble-milk.jpg', 'Sữa tươi chân trâu đường đen', '49.000 đ')" id="milk-tea-1">
+                        <img src="images/products/milk-tea/black-bubble-milk.jpg" alt="">
+                        <h3 class="desc">Sữa tươi chân trâu đường đen</h3>
+                        <p class="desc">49.000 đ</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="category" id="yogurt">
+                <h1>Sữa chua</h1>
+                <div class="product-panel">
+                    <div class="product-pane" onclick="showItem('images/products/yogurt/fruit-yogurt.jpg', 'Sữa chua hoa quả', '47.000 đ')" id="yogurt-1">
+                        <img src="images/products/yogurt/fruit-yogurt.jpg" alt="">
+                        <h3 class="desc">Sữa chua hoa quả</h3>
+                        <p class="desc">47.000 đ</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="category" id="juice">
+                <h1>Nước ép hoa quả</h1>
+                <div class="product-panel">
+                    <div class="product-pane" onclick="showItem('images/products/juice/lemonade.jpg', 'Nước chanh tươi', '42.000 đ')" id="juice-1">
+                        <img src="images/products/juice/lemonade.jpg" alt="">
+                        <h3 class="desc">Nước chanh tươi</h3>
+                        <p class="desc">42.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/juice/orange-carrot.jpg', 'Nước ép cam cà rốt', '49.000 đ')" id="juice-2">
+                        <img src="images/products/juice/orange-carrot.jpg" alt="">
+                        <h3 class="desc">Nước ép cam cà rốt</h3>
+                        <p class="desc">49.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/juice/melon-juice.jpg', 'Nước ép dưa hấu', '49.000 đ')" id="juice-3">
+                        <img src="images/products/juice/melon-juice.jpg" alt="">
+                        <h3 class="desc">Nước ép dưa hấu</h3>
+                        <p class="desc">49.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/juice/guava-juice.jpg', 'Nước ép ổi', '49.000 đ')" id="juice-4">
+                        <img src="images/products/juice/guava-juice.jpg" alt="">
+                        <h3 class="desc">Nước ép ổi</h3>
+                        <p class="desc">49.000 đ</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="category" id="smoothie">
+                <h1>Sinh tố</h1>
+                <div class="product-panel">
+                    <div class="product-pane" onclick="showItem('images/products/smoothie/mango-smoothie.jpg', 'Sinh tố xoài', '49.000 đ')" id="smoothie-1">
+                        <img src="images/products/smoothie/mango-smoothie.jpg" alt="">
+                        <h3 class="desc">Sinh tố xoài</h3>
+                        <p class="desc">49.000 đ</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="category" id="blended-ice">
+                <h1>Đá xay</h1>
+                <div class="product-panel">
+                    <div class="product-pane" onclick="showItem('images/products/blended-ice/cookie-ice.jpg', 'Cookie đá xay', '49.000 đ')" id="blended-ice-1">
+                        <img src="images/products/blended-ice/cookie-ice.jpg" alt="">
+                        <h3 class="desc">Cookie đá xay</h3>
+                        <p class="desc">49.000 đ</p>
+                    </div>
+
+                    <div class="product-pane" onclick="showItem('images/products/blended-ice/iced-matcha.jpg', 'Matcha đá xay', '49.000 đ')" id="blended-ice-2">
+                        <img src="images/products/blended-ice/iced-matcha.jpg" alt="">
+                        <h3 class="desc">Matcha đá xay</h3>
+                        <p class="desc">49.000 đ</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="category" id="food">
+                <h1>Đồ ăn</h1>
+                <div class="product-panel">
+                    <div class="product-pane" onclick="showItem('images/products/food/bread-and-beef.jpg', 'Bánh mì bò kho', '55.000 đ')" id="food-1">
+                        <img src="images/products/food/bread-and-beef.jpg" alt="">
+                        <h3 class="desc">Bánh mì bò kho</h3>
+                        <p class="desc">55.000 đ</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="category" id="other">
+                <h1>Đặc biệt</h1>
+                <div class="product-panel">
+                    <div class="product-pane" onclick="showSpecial('images/products/special/special-1.jpg', 'Cà phê chai 330ml', '99.000 đ', '109.000 đ', '99.000 đ')" id="other-1">
+                        <img src="images/products/special/special-1.jpg" alt="">
+                        <h3 class="desc">Cà phê chai 330ml</h3>
+                    </div>                 
+                    <div class="product-pane" onclick="showSpecial('images/products/special/special-2.jpg', 'Cà phê chai 250ml', '68.000 đ', '80.000 đ', '75.000 đ')" id="other-2">
+                        <img src="images/products/special/special-2.jpg" alt="">
+                        <h3 class="desc">Cà phê chai 250ml</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Pop-up -->
+    <div id="order-board">
+        <div style="margin:0px; display: flex; justify-content: flex-end;">
+            <i class="cancel fa-solid fa-xmark" onclick="showItem()"></i>
+        </div>
+        <div class="order-content">
+            <img id="image" src="images/product-slideshow/citron.jpg" alt="">
+            <div class="product-description">
+                <h1 class="desc" id="title">Lorem, ipsum.</h1>
+                <h2 class="desc" id="price">xyz d</h2>
+                <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum placeat in nulla totam et fugiat
+                    sapiente. Illo labore, accusamus earum inventore corrupti, ipsam suscipit tempore voluptas doloribus
+                    tempora magni nobis.</p>
+                <h1 class="order-button">ORDER</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="special-board">
+        <div style="margin:0px; display: flex; justify-content: flex-end;">
+            <i class="cancel fa-solid fa-xmark" onclick="showSpecial()"></i>
+        </div>
+        <div class="order-content">
+            <img id="spec-image" src="images/product-slideshow/citron.jpg" alt="">
+            <div class="product-description">
+                <h1 class="desc" id="spec-title">Lorem, ipsum.</h1>
+                <form action="">
+
+                    <label for="black-coffee">
+                        <input type="checkbox" name="type" id="black-coffee"> Cafe đen hạt mộc - 
+                        <p class="cost" id="cost1">a</p>
+                    </label>
+
+                    <label for="milk-coffee">
+                        <input type="checkbox" name="type" id="milk-coffee"> Cafe sữa hạt mộc - 
+                        <p class="cost" id="cost2">a</p>
+                    </label>
+
+                    <label for="bac-xiu">
+                        <input type="checkbox" name="type" id="bac-xiu"> Bạc xỉu -
+                        <p class="cost" id="cost3">a</p>
+                    </label>
+
+                </form>
+                <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum placeat in nulla totam et fugiat
+                    sapiente. Illo labore, accusamus earum inventore corrupti, ipsam suscipit tempore voluptas doloribus
+                    tempora magni nobis.</p>
+                <h1 class="order-button">ORDER</h1>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- footer -->
+    <div id="footer">
+        <div id="summary">
+            <div class="general-info">
+                <h4 class="title">Giới thiệu</h4>
+                <a class="footer-item" href="https://trungnguyencoffeevn.com/?gclid=Cj0KCQiAm5ycBhCXARIsAPldzoXcFGzYS1e101dnjBPr_TZ475ymJvc52jlPJza-INt0AkgrfVRZ0NQaAsqnEALw_wcB">Công ty mẹ</a>
+                <a class="footer-item" href="about.html">Về chúng tôi</a>
+                <a class="footer-item" href="https://www.facebook.com/ecoffee.98vtp/">Facebook</a>
+                <a class="footer-item" href="order.html">Đặt hàng</a>
+                
+
+            
+            </div>
+
+            <div id="contacts">
+                <div class="important-footer">
+                    <h4 class="title">Liên hệ</h4>
+                    <p><i class="fa-solid fa-phone"></i> Đặt hàng: 024-3832-9898/093-633-9898</p>
+                    <p><i class="fa-solid fa-map-location-dot"></i> Địa chỉ chi nhánh: 98 Vũ Trọng Phụng, Thanh Xuân, Hà Nội</p>
+                </div>                
+                <img src="images/logo.png" alt="">
+            </div>
+
+
+        </div>
+
+        <div id="info">
+            <div>
+                <p>CƠ SỞ NHƯỢNG QUYỀN KINH DOANH TRUNG NGUYÊN E-COFFEE 98 VŨ TRỌNG PHỤNG</p>
+                <p>Người đại diện: Đào Thị Thanh Tâm</p>
+                <p>Địa chỉ liên hệ: 98 Vũ Trọng Phụng, Thanh Xuân, Hà Nội</p>
+                <p>Điện thoại: 024-3832-9898 / 093-633-9898</p>    
+            </div>
+           
+            <div id="follow">
+                <p>Theo dõi chúng tôi trên Facebook</p>
+                <a href="https://www.facebook.com/ecoffee.98vtp/"><img src="images\icon.png" alt="" srcset=""></a>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+    <!-- scripts -->
+    <script src="index-scripts/navbar.js"></script>
+    <script src="order-scripts/list.js"></script>
+    <script src="order-scripts/order.js"></script>
+</body>
+</html>

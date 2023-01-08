@@ -1,0 +1,63 @@
+body {
+    height: 100vh;
+    margin: 0px;
+}
+
+/* navbar */
+#header {
+    margin: 0px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+}
+#logo {
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#logo h1 {
+    min-width: 620px;
+    height: 38%;
+    margin: auto;
+    text-align: center;
+    font-family: serif;
+    font-size: 40px;
+}
+
+#nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    background-color: rgb(54, 54, 54);
+}
+.nav-content {
+    color: white;
+    font-weight: 900;
+    font-size: 17px;
+    display: inline-block;
+    background-color: rgb(77, 77, 77);
+    text-decoration: none;
+    margin: 0px;
+    padding: 23px;
+    border-left: 1px solid rgb(110, 110, 110);
+}
+.nav-content:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(236, 236, 236);
+}
+.main {
+    background-color: red;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.main-info {
+    margin-top: 266px;
+}
